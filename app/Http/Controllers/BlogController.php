@@ -4,13 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\View\View;
-use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Contracts\Pagination\Paginator;
+use App\Http\Requests\BlogFilterRequest;
 
 class BlogController extends Controller
 {
-    public function index(): View
+    public function index(BlogFilterRequest $request): View
     {
         return view('blog.index', [
             'posts' => Post::paginate(1)
