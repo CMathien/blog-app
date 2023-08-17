@@ -18,6 +18,7 @@
 </head>
 @php
 $route = request()->route()->getName();
+
 @endphp
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
